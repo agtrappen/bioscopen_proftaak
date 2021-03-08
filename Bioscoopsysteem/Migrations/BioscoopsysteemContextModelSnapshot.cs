@@ -19,64 +19,45 @@ namespace Bioscoopsysteem.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Customers", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Customer", b =>
                 {
-                    b.Property<int>("CustomersId")
+                    b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("TicketsTicketId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("email")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CustomersId");
-
-                    b.HasIndex("TicketsTicketId");
+                    b.HasKey("CustomerId");
 
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Halls", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Hall", b =>
                 {
-                    b.Property<int>("HallsId")
+                    b.Property<int>("HallId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("SeatsSeatId")
+                    b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ShowsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("capacity")
-                        .HasColumnType("int");
-
-                    b.Property<string>("name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("wheelchair_accessable")
+                    b.Property<bool>("Wheelchair_accessable")
                         .HasColumnType("bit");
 
-                    b.HasKey("HallsId");
-
-                    b.HasIndex("SeatsSeatId");
-
-                    b.HasIndex("ShowsId");
+                    b.HasKey("HallId");
 
                     b.ToTable("Halls");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Movies", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Movie", b =>
                 {
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
@@ -87,147 +68,105 @@ namespace Bioscoopsysteem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ShowsId")
+                    b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<int>("duration")
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HallId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MovieId");
-
-                    b.HasIndex("ShowsId");
 
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Seats", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Seat", b =>
                 {
                     b.Property<int>("SeatId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("TicketsTicketId")
+                    b.Property<int>("HallId")
                         .HasColumnType("int");
 
-                    b.Property<int>("row_number")
+                    b.Property<int>("Row_number")
                         .HasColumnType("int");
 
-                    b.Property<int>("seat_number")
+                    b.Property<int>("Seat_number")
                         .HasColumnType("int");
 
                     b.HasKey("SeatId");
 
-                    b.HasIndex("TicketsTicketId");
-
                     b.ToTable("Seats");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Shows", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Show", b =>
                 {
-                    b.Property<int>("ShowsId")
+                    b.Property<int>("ShowId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("HallId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Start_date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("TicketsTicketId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ShowsId");
-
-                    b.HasIndex("TicketsTicketId");
+                    b.HasKey("ShowId");
 
                     b.ToTable("Shows");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Tickets", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Ticket", b =>
                 {
                     b.Property<int>("TicketId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Date_sold")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShowId")
+                        .HasColumnType("int");
+
                     b.HasKey("TicketId");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Tickets");
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Customers", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Ticket", b =>
                 {
-                    b.HasOne("Bioscoopsysteem.Models.Tickets", "Tickets")
-                        .WithMany("Customers")
-                        .HasForeignKey("TicketsTicketId");
-
-                    b.Navigation("Tickets");
+                    b.HasOne("Bioscoopsysteem.Models.Customer", null)
+                        .WithMany("Ticket")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("Bioscoopsysteem.Models.Halls", b =>
+            modelBuilder.Entity("Bioscoopsysteem.Models.Customer", b =>
                 {
-                    b.HasOne("Bioscoopsysteem.Models.Seats", "Seats")
-                        .WithMany("Halls")
-                        .HasForeignKey("SeatsSeatId");
-
-                    b.HasOne("Bioscoopsysteem.Models.Shows", "Shows")
-                        .WithMany("Halls")
-                        .HasForeignKey("ShowsId");
-
-                    b.Navigation("Seats");
-
-                    b.Navigation("Shows");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Movies", b =>
-                {
-                    b.HasOne("Bioscoopsysteem.Models.Shows", "Shows")
-                        .WithMany("Movies")
-                        .HasForeignKey("ShowsId");
-
-                    b.Navigation("Shows");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Seats", b =>
-                {
-                    b.HasOne("Bioscoopsysteem.Models.Tickets", "Tickets")
-                        .WithMany("Seats")
-                        .HasForeignKey("TicketsTicketId");
-
-                    b.Navigation("Tickets");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Shows", b =>
-                {
-                    b.HasOne("Bioscoopsysteem.Models.Tickets", "Tickets")
-                        .WithMany("Shows")
-                        .HasForeignKey("TicketsTicketId");
-
-                    b.Navigation("Tickets");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Seats", b =>
-                {
-                    b.Navigation("Halls");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Shows", b =>
-                {
-                    b.Navigation("Halls");
-
-                    b.Navigation("Movies");
-                });
-
-            modelBuilder.Entity("Bioscoopsysteem.Models.Tickets", b =>
-                {
-                    b.Navigation("Customers");
-
-                    b.Navigation("Seats");
-
-                    b.Navigation("Shows");
+                    b.Navigation("Ticket");
                 });
 #pragma warning restore 612, 618
         }

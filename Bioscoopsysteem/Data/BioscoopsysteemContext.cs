@@ -13,16 +13,16 @@ namespace Bioscoopsysteem.Data
             : base(options)
         {
         }
-        public DbSet<Bioscoopsysteem.Models.Tickets> Tickets { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Ticket> Tickets { get; set; }
 
-        public DbSet<Bioscoopsysteem.Models.Halls> Halls { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Hall> Halls { get; set; }
 
-        public DbSet<Bioscoopsysteem.Models.Movies> Movies { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Movie> Movies { get; set; }
 
-        public DbSet<Bioscoopsysteem.Models.Shows> Shows { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Show> Shows { get; set; }
 
-        public DbSet<Bioscoopsysteem.Models.Seats> Seats { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Seat> Seats { get; set; }
 
-        public DbSet<Bioscoopsysteem.Models.Customers> Customers { get; set; }
+        public DbSet<Bioscoopsysteem.Models.Customer> Customers { get; set; }
     }
 }

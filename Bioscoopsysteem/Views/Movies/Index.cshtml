@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Bioscoopsysteem.Models.Movies>
+﻿@model IEnumerable<Bioscoopsysteem.Models.Movie>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,11 +13,18 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.duration)
+                @Html.DisplayNameFor(model => model.Duration)
             </th>
+
             <th></th>
         </tr>
     </thead>
@@ -25,11 +32,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.duration)
+                @Html.DisplayFor(modelItem => item.Duration)
             </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MovieId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.MovieId">Details</a> |

@@ -7435,24 +7435,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/agtrappen/.nuget/packages/": {}
+    "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/agtrappen/Projects/bioscopen_proftaak/Bioscoopsysteem/Bioscoopsysteem.csproj",
+      "projectUniqueName": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
       "projectName": "Bioscoopsysteem",
-      "projectPath": "/Users/agtrappen/Projects/bioscopen_proftaak/Bioscoopsysteem/Bioscoopsysteem.csproj",
-      "packagesPath": "/Users/agtrappen/.nuget/packages/",
-      "outputPath": "/Users/agtrappen/Projects/bioscopen_proftaak/Bioscoopsysteem/obj/",
+      "projectPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "packagesPath": "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/agtrappen/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Qui van Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7508,7 +7514,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

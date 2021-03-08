@@ -33,14 +33,14 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var shows = await _context.Shows
-                .FirstOrDefaultAsync(m => m.ShowsId == id);
-            if (shows == null)
+            var show = await _context.Shows
+                .FirstOrDefaultAsync(m => m.ShowId == id);
+            if (show == null)
             {
                 return NotFound();
             }
 
-            return View(shows);
+            return View(show);
         }
 
         // GET: Shows/Create
@@ -54,15 +54,15 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ShowsId,Start_date")] Shows shows)
+        public async Task<IActionResult> Create([Bind("ShowId,Start_date,HallId,MovieId")] Show show)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(shows);
+                _context.Add(show);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(shows);
+            return View(show);
         }
 
         // GET: Shows/Edit/5
@@ -73,12 +73,12 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var shows = await _context.Shows.FindAsync(id);
-            if (shows == null)
+            var show = await _context.Shows.FindAsync(id);
+            if (show == null)
             {
                 return NotFound();
             }
-            return View(shows);
+            return View(show);
         }
 
         // POST: Shows/Edit/5
@@ -86,9 +86,9 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ShowsId,Start_date")] Shows shows)
+        public async Task<IActionResult> Edit(int id, [Bind("ShowId,Start_date,HallId,MovieId")] Show show)
         {
-            if (id != shows.ShowsId)
+            if (id != show.ShowId)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace Bioscoopsysteem.Controllers
             {
                 try
                 {
-                    _context.Update(shows);
+                    _context.Update(show);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ShowsExists(shows.ShowsId))
+                    if (!ShowExists(show.ShowId))
                     {
                         return NotFound();
                     }
@@ -113,7 +113,7 @@ namespace Bioscoopsysteem.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(shows);
+            return View(show);
         }
 
         // GET: Shows/Delete/5
@@ -124,14 +124,14 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var shows = await _context.Shows
-                .FirstOrDefaultAsync(m => m.ShowsId == id);
-            if (shows == null)
+            var show = await _context.Shows
+                .FirstOrDefaultAsync(m => m.ShowId == id);
+            if (show == null)
             {
                 return NotFound();
             }
 
-            return View(shows);
+            return View(show);
         }
 
         // POST: Shows/Delete/5
@@ -139,15 +139,15 @@ namespace Bioscoopsysteem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var shows = await _context.Shows.FindAsync(id);
-            _context.Shows.Remove(shows);
+            var show = await _context.Shows.FindAsync(id);
+            _context.Shows.Remove(show);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ShowsExists(int id)
+        private bool ShowExists(int id)
         {
-            return _context.Shows.Any(e => e.ShowsId == id);
+            return _context.Shows.Any(e => e.ShowId == id);
         }
     }
 }

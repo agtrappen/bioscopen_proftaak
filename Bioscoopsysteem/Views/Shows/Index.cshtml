@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Bioscoopsysteem.Models.Shows>
+﻿@model IEnumerable<Bioscoopsysteem.Models.Show>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,6 +15,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Start_date)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HallId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieId)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -25,9 +31,15 @@
                 @Html.DisplayFor(modelItem => item.Start_date)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ShowsId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ShowsId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ShowsId">Delete</a>
+                @Html.DisplayFor(modelItem => item.HallId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ShowId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ShowId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ShowId">Delete</a>
             </td>
         </tr>
 }

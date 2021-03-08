@@ -1,4 +1,4 @@
-﻿@model Bioscoopsysteem.Models.Shows
+﻿@model Bioscoopsysteem.Models.Show
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,17 +6,27 @@
 
 <h1>Edit</h1>
 
-<h4>Shows</h4>
+<h4>Show</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ShowsId" />
+            <input type="hidden" asp-for="ShowId" />
             <div class="form-group">
                 <label asp-for="Start_date" class="control-label"></label>
                 <input asp-for="Start_date" class="form-control" />
                 <span asp-validation-for="Start_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HallId" class="control-label"></label>
+                <input asp-for="HallId" class="form-control" />
+                <span asp-validation-for="HallId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieId" class="control-label"></label>
+                <input asp-for="MovieId" class="form-control" />
+                <span asp-validation-for="MovieId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

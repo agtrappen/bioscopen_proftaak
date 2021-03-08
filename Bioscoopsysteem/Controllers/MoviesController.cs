@@ -33,14 +33,14 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var movies = await _context.Movies
+            var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.MovieId == id);
-            if (movies == null)
+            if (movie == null)
             {
                 return NotFound();
             }
 
-            return View(movies);
+            return View(movie);
         }
 
         // GET: Movies/Create
@@ -54,15 +54,15 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MovieId,Description,duration")] Movies movies)
+        public async Task<IActionResult> Create([Bind("MovieId,Genre,Description,Duration,HallId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(movies);
+                _context.Add(movie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(movies);
+            return View(movie);
         }
 
         // GET: Movies/Edit/5
@@ -73,12 +73,12 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var movies = await _context.Movies.FindAsync(id);
-            if (movies == null)
+            var movie = await _context.Movies.FindAsync(id);
+            if (movie == null)
             {
                 return NotFound();
             }
-            return View(movies);
+            return View(movie);
         }
 
         // POST: Movies/Edit/5
@@ -86,9 +86,9 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Description,duration")] Movies movies)
+        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Genre,Description,Duration,HallId")] Movie movie)
         {
-            if (id != movies.MovieId)
+            if (id != movie.MovieId)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace Bioscoopsysteem.Controllers
             {
                 try
                 {
-                    _context.Update(movies);
+                    _context.Update(movie);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MoviesExists(movies.MovieId))
+                    if (!MovieExists(movie.MovieId))
                     {
                         return NotFound();
                     }
@@ -113,7 +113,7 @@ namespace Bioscoopsysteem.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(movies);
+            return View(movie);
         }
 
         // GET: Movies/Delete/5
@@ -124,14 +124,14 @@ namespace Bioscoopsysteem.Controllers
                 return NotFound();
             }
 
-            var movies = await _context.Movies
+            var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.MovieId == id);
-            if (movies == null)
+            if (movie == null)
             {
                 return NotFound();
             }
 
-            return View(movies);
+            return View(movie);
         }
 
         // POST: Movies/Delete/5
@@ -139,13 +139,13 @@ namespace Bioscoopsysteem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movies = await _context.Movies.FindAsync(id);
-            _context.Movies.Remove(movies);
+            var movie = await _context.Movies.FindAsync(id);
+            _context.Movies.Remove(movie);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MoviesExists(int id)
+        private bool MovieExists(int id)
         {
             return _context.Movies.Any(e => e.MovieId == id);
         }
