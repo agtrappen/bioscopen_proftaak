@@ -13,13 +13,13 @@
         <thead>
             <tr>
                 <th>
-                   Datum
+                    Datum
                 </th>
                 <th>
-                    Zaal ID
+                    Zaal
                 </th>
                 <th>
-                   Film ID
+                    Film
                 </th>
                 <th>
                     Ticket prijs
@@ -38,7 +38,7 @@
                         @Html.DisplayFor(modelItem => item.HallId)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.MovieId)
+                        @Html.DisplayFor(modelItem => item.Movie.Title)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Ticket_price)
@@ -46,11 +46,11 @@
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.ShowId">Aanpassen</a> |
                         <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ShowId">Verwijderen</a> | 
+                        <a asp-action="Delete" asp-route-id="@item.ShowId">Verwijderen</a> |
                         <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
                     </td>
                 </tr>
             }
         </tbody>
-    </table>    
+    </table>
 </div>
