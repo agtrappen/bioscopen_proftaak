@@ -3,45 +3,54 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container">
+    <h1>Index</h1>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Start_date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HallId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MovieId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Start_date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HallId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MovieId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ShowId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ShowId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ShowId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                   Datum
+                </th>
+                <th>
+                    Zaal ID
+                </th>
+                <th>
+                   Film ID
+                </th>
+                <th>
+                    Ticket prijs
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Start_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HallId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ticket_price)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ShowId">Aanpassen</a> |
+                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ShowId">Verwijderen</a> | 
+                        <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>    
+</div>

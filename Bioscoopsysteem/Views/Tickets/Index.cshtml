@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Bioscoopsysteem.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Tickets";
+}
+<div class="container">
+    <h1>Index</h1>
+    <p>
+        <a asp-action="Create">Ticket kopen</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    TicketId
+                </th>
+                <th>
+                    Date_sold
+                </th>
+                <th>
+                    CustomerId
+                </th>
+                <th>
+                    ShowId
+                </th>
+                <th>
+                    SeatId
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TicketId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_sold)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShowId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeatId)
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

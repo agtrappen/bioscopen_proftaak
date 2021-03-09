@@ -124,6 +124,9 @@ namespace Bioscoopsysteem.Migrations
                     b.Property<DateTime>("Start_date")
                         .HasColumnType("datetime2");
 
+                    b.Property<double>("Ticket_price")
+                        .HasColumnType("float");
+
                     b.HasKey("ShowId");
 
                     b.ToTable("Shows");

@@ -16,6 +16,7 @@ namespace Bioscoopsysteem.Models
         public int HallId { get; set; }
         [Required]
         public int MovieId { get; set; }
-
+        [Required]
+        public double Ticket_price { get; set; }
     }
 }

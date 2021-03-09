@@ -54,7 +54,7 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ShowId,Start_date,HallId,MovieId")] Show show)
+        public async Task<IActionResult> Create([Bind("ShowId,Start_date,HallId,MovieId,Ticket_price")] Show show)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ShowId,Start_date,HallId,MovieId")] Show show)
+        public async Task<IActionResult> Edit(int id, [Bind("ShowId,Start_date,HallId,MovieId,Ticket_price")] Show show)
         {
             if (id != show.ShowId)
             {
@@ -149,5 +149,7 @@ namespace Bioscoopsysteem.Controllers
         {
             return _context.Shows.Any(e => e.ShowId == id);
         }
+
+
     }
 }

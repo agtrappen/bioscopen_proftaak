@@ -22,6 +22,10 @@ namespace Bioscoopsysteem.Models
         //foreign key
         public int SeatId { get; set; }
      
+        public Ticket()
+        {
+            Date_sold = DateTime.Now().toString();
+        }
 
     }
 }

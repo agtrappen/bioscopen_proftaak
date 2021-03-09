@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bioscoopsysteem.Migrations
 {
     [DbContext(typeof(BioscoopsysteemContext))]
-    [Migration("20210308114246_MovieTitleColumn")]
-    partial class MovieTitleColumn
+    [Migration("20210308220922_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -125,6 +125,9 @@ namespace Bioscoopsysteem.Migrations
 
                     b.Property<DateTime>("Start_date")
                         .HasColumnType("datetime2");
+
+                    b.Property<double>("Ticket_price")
+                        .HasColumnType("float");
 
                     b.HasKey("ShowId");
 
