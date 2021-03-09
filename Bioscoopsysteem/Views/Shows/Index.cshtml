@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<Bioscoopsysteem.Models.Show>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Shows";
 }
 <div class="container">
-    <h1>Index</h1>
+    <h1>Films binnen 2 uur:</h1>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
     <table class="table">
         <thead>
             <tr>
@@ -43,10 +40,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Ticket_price)
                     </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ShowId">Aanpassen</a> |
-                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ShowId">Verwijderen</a> |
+                    <td>                      
+                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |                   
                         <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
                     </td>
                 </tr>

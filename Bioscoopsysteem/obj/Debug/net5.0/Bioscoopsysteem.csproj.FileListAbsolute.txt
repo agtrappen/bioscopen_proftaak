@@ -556,3 +556,4 @@ C:\Users\Qui van Nguyen\source\repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debu
 C:\Users\Qui van Nguyen\source\repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Customers\Index.cshtml.g.cs
 C:\Users\Qui van Nguyen\source\repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Tickets\Create.cshtml.g.cs
 C:\Users\Qui van Nguyen\source\repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Tickets\Index.cshtml.g.cs
+C:\Users\Qui van Nguyen\source\repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Customers\BuyTicket.cshtml.g.cs
