@@ -4,8 +4,18 @@
     ViewData["Title"] = "Shows";
 }
 <div class="container">
-    <h1>Films binnen 2 uur:</h1>
+    <h1>Up coming shows:</h1>
+    <label for="timeFrames">Filter within:</label>
 
+    <form asp-action="Index" method="get">
+        <select name="timeFrames" id="timeFrames">
+            <option value="twoHours">2 hours</option>
+            <option value="fourHours">4 hours</option>
+        </select>   <input type="submit" value="OK" class="btn btn-primary" />
+    </form>
+ 
+    <br/>
+    <a asp-action="Index">Back to full list</a> 
     <table class="table">
         <thead>
             <tr>
@@ -40,8 +50,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Ticket_price)
                     </td>
-                    <td>                      
-                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |                   
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
                         <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
                     </td>
                 </tr>

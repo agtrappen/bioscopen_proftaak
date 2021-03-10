@@ -19,29 +19,30 @@ namespace Bioscoopsysteem.Controllers
             _context = context;
         }
 
-        //public ActionResult Index()
-        //{​​​​​​​
-        //    return View(_context.Shows.OrderByDescending(shows = .Take(10).ToList());
-        //}​​​​​​​
-
         // GET: Shows
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? timeFrames)
         {
             var shows = _context.Shows
                 .Include(s => s.Movie)
                 .AsNoTracking();
 
-            shows = shows.OrderBy(s => s.Start_date);
-
             var currentTime = DateTime.Now;
-            currentTime.AddHours(2);
-            DateTime newTime = currentTime.AddHours(2);
 
-            var nextShows = from show in shows
-                            where show.Start_date >= currentTime && show.Start_date <= newTime                          
-                            select show;
-
-            return View(await nextShows.ToListAsync());
+            switch (timeFrames)
+            {
+                case "twoHours":
+                    DateTime twoHourTimeFrame = currentTime.AddHours(2);                 
+                    shows = shows.OrderBy(s=>s.Start_date).Where(s => s.Start_date <= twoHourTimeFrame);                  
+                    break;
+                case "fourHours":                               
+                    DateTime fourHourTimeFrame = currentTime.AddHours(4);                  
+                    shows = shows.OrderBy(s => s.Start_date).Where(s => s.Start_date <= fourHourTimeFrame);
+                    break;
+                default:
+                    shows = shows.OrderBy(s => s.Start_date);
+                    break;
+            }
+            return View(await shows.ToListAsync());
         }
 
         // GET: Shows/Details/5
