@@ -20,9 +20,17 @@ namespace Bioscoopsysteem.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? genre)
         {
-            return View(await _context.Movies.ToListAsync());
+            var movies = _context.Movies
+                .AsNoTracking();
+
+            if(genre != null)
+            {
+                movies = movies.OrderBy(s => s.Genre).Where(s => s.Genre == genre);
+            }
+
+            return View(await movies.ToListAsync());
         }
 
         // GET: Movies/Details/5
