@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
   },
   "projects": {
@@ -20,6 +21,26 @@
           "C:\\Users\\ayham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+=======
+    "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "projectName": "Bioscoopsysteem",
+        "projectPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "packagesPath": "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qui van Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> main
         ],
         "originalTargetFrameworks": [
           "net5.0"
