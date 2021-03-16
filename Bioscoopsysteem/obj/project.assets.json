@@ -7435,20 +7435,45 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\agtra\\.nuget\\packages\\": {}
+<<<<<<< HEAD
+    "C:\\Users\\ayham\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+=======
+    "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
       "projectName": "Bioscoopsysteem",
-      "projectPath": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
-      "packagesPath": "C:\\Users\\agtra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+      "projectPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "packagesPath": "C:\\Users\\ayham\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\agtra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ayham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+=======
+      "projectUniqueName": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "projectName": "Bioscoopsysteem",
+      "projectPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "packagesPath": "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Qui van Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7510,7 +7535,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

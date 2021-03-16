@@ -50,6 +50,22 @@ namespace Bioscoopsysteem.Controllers
 
             return View(await shows.ToListAsync());
         }
+        public async Task<IActionResult> IndexCurrentMovieWeek()
+        {
+            var shows = _context.Shows
+                .Include(s => s.Movie)
+                .AsNoTracking();
+
+            DateTime today = DateTime.Today;
+            int daysUntilMonday = ((int)DayOfWeek.Monday - (int)today.DayOfWeek + 7) % 7;
+            DateTime lastmonday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+            DateTime nextMonday = today.AddDays(daysUntilMonday);
+
+            shows = shows.OrderBy(s => s.Start_date).Where(s => (s.Start_date >= lastmonday) && (s.Start_date <= nextMonday));
+
+            return View(await shows.ToListAsync());
+        }
+
 
         // GET: Shows/Details/5
         public async Task<IActionResult> Details(int? id)
