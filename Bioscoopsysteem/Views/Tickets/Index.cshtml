@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Bioscoopsysteem.Models.Ticket>
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@model IEnumerable<Bioscoopsysteem.Models.Ticket>
 
 @{
     ViewData["Title"] = "Tickets";
@@ -12,19 +14,19 @@
         <thead>
             <tr>
                 <th>
-                    TicketId
+                    @localizer["KaartId"]
                 </th>
                 <th>
-                    Date_sold
+                    @localizer["Datum"]
                 </th>
                 <th>
-                    CustomerId
+                    @localizer["Bezoekerid"]
                 </th>
                 <th>
-                    ShowId
+                    @localizer["ShowId"]
                 </th>
                 <th>
-                    SeatId
+                    @localizer["zitId"]
                 </th>
                 <th></th>
             </tr>
@@ -32,26 +34,25 @@
         <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TicketId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date_sold)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CustomerId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ShowId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SeatId)
-                </td>
-                <td>
-                    
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TicketId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date_sold)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShowId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeatId)
+                    </td>
+                    <td>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>
