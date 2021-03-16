@@ -9,15 +9,7 @@
       "DEBUG",
       "NET",
       "NET5_0",
-      "NETCOREAPP",
-      "NET5_0_OR_GREATER",
-      "NETCOREAPP1_0_OR_GREATER",
-      "NETCOREAPP1_1_OR_GREATER",
-      "NETCOREAPP2_0_OR_GREATER",
-      "NETCOREAPP2_1_OR_GREATER",
-      "NETCOREAPP2_2_OR_GREATER",
-      "NETCOREAPP3_0_OR_GREATER",
-      "NETCOREAPP3_1_OR_GREATER"
+      "NETCOREAPP"
     ],
     "languageVersion": "9.0",
     "platform": "",
@@ -321,6 +313,17 @@
         },
         "runtime": {
           "Bioscoopsysteem.dll": {}
+        },
+        "resources": {
+          "en/Bioscoopsysteem.resources.dll": {
+            "locale": "en"
+          },
+          "fr/Bioscoopsysteem.resources.dll": {
+            "locale": "fr"
+          },
+          "nl/Bioscoopsysteem.resources.dll": {
+            "locale": "nl"
+          }
         },
         "compile": {
           "Bioscoopsysteem.dll": {}

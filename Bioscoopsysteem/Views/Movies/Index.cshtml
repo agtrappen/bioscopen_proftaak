@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Bioscoopsysteem.Models.Movie>
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@model IEnumerable<Bioscoopsysteem.Models.Movie>
 
 @{
     ViewData["Title"] = "Index";
@@ -26,16 +28,19 @@
         <thead>
             <tr>
                 <th>
-                    Titel
+                    @localizer["Titel"]
                 </th>
                 <th>
-                    Soort
+                    @localizer["Soort"]
+
                 </th>
                 <th>
-                    Beschrijving
+                    @localizer["Beschrijving"]
                 </th>
                 <th>
-                    Duur
+
+                    @localizer["Duur"]
+
                 </th>
 
                 <th></th>
