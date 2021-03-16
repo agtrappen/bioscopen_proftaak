@@ -37,24 +37,24 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Start_date)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HallId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Movie.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Ticket_price)
-                    </td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
-                        <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Start_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HallId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Movie.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ticket_price)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ShowId">Informatie</a> |
+                    <a asp-controller="Customers" asp-action="Go_buy_ticket" asp-route-id="@item.ShowId">Ticket kopen</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

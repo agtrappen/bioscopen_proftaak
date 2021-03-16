@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
+    "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {
+    "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "projectUniqueName": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
         "projectName": "Bioscoopsysteem",
-        "projectPath": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
-        "packagesPath": "C:\\Users\\agtra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agtra\\Source\\Repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+        "projectPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "packagesPath": "C:\\Users\\ayham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\agtra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ayham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -77,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

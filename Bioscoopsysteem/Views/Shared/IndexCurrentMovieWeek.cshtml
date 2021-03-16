@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Bioscoopsysteem.Models.Show>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <h1>Index</h1>
+
+    <p>
+        <a asp-controller="Movies" asp-action="Create">Create New</a>
+    </p>
+    <div>
+        <a asp-controller="Movies" asp-action="Index">Back to List</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Titel
+                </th>
+                <th>
+                    Soort
+                </th>
+                <th>
+                    Beschrijving
+                </th>
+                <th>
+                    Duur
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Movie.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Movie.Genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Movie.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Movie.Duration)
+                    </td>
+
+                    <td>
+                        <a asp-controller="Movies" asp-action="Edit" asp-route-id="@item.Movie.MovieId">Aanpassen</a> |
+                        <a asp-controller="Movies" asp-action="Details" asp-route-id="@item.Movie.MovieId">Informatie</a> |
+                        <a asp-controller="Movies" asp-action="Delete" asp-route-id="@item.Movie.MovieId">Verwijderen</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
