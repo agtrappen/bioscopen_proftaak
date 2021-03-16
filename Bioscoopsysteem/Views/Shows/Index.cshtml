@@ -6,16 +6,30 @@
 <div class="container">
     <h1>Up coming shows:</h1>
     <label for="timeFrames">Filter within:</label>
+    <div class="row">
+        <div>
+            <form asp-action="Index" method="get">
+                <select name="timeFrames" id="timeFrames">
+                    <option value="twoHours">2 hours</option>
+                    <option value="fourHours">4 hours</option>
+                </select>   <input type="submit" value="OK" class="btn btn-primary" />
+            </form>
+        </div>
 
-    <form asp-action="Index" method="get">
-        <select name="timeFrames" id="timeFrames">
-            <option value="twoHours">2 hours</option>
-            <option value="fourHours">4 hours</option>
-        </select>   <input type="submit" value="OK" class="btn btn-primary" />
-    </form>
- 
-    <br/>
-    <a asp-action="Index">Back to full list</a> 
+        <div class="ml-2">
+            <form asp-action="Index" method="get">
+                <select name="genre" id="genre">
+                    <option value="Drama">Drama</option>
+                    <option value="Crime, Drama">Crime, Drama</option>
+                    <option value="Action, Crime, Drama">Action, Crime, Drama</option>
+                    <option value="Crime, Drama">Crime, Drama</option>
+                </select>   <input type="submit" value="OK" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    
+    <br />
+    <a asp-action="Index">Back to full list</a>
     <table class="table">
         <thead>
             <tr>

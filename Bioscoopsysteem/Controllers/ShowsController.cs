@@ -20,7 +20,7 @@ namespace Bioscoopsysteem.Controllers
         }
 
         // GET: Shows
-        public async Task<IActionResult> Index(string? timeFrames)
+        public async Task<IActionResult> Index(string? timeFrames, string? genre)
         {
             var shows = _context.Shows
                 .Include(s => s.Movie)
@@ -42,6 +42,12 @@ namespace Bioscoopsysteem.Controllers
                     shows = shows.OrderBy(s => s.Start_date);
                     break;
             }
+
+            if (genre != null)
+            {
+                shows = shows.OrderBy(s => s.Start_date).Where(s => s.Movie.Genre == genre);
+            }
+
             return View(await shows.ToListAsync());
         }
 
