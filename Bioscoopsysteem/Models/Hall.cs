@@ -14,6 +14,8 @@ namespace Bioscoopsysteem.Models
         public int  Capacity { get; set; }
         [Required]//not null
         public bool Wheelchair_accessable { get; set; }
+        
+        public ICollection<Show> Shows { get; set; }
 
     }
 }
