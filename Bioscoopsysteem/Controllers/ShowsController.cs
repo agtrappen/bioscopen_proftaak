@@ -76,6 +76,7 @@ namespace Bioscoopsysteem.Controllers
             }
 
             var show = await _context.Shows
+                .Include(s => s.Movie)
                 .FirstOrDefaultAsync(m => m.ShowId == id);
             if (show == null)
             {

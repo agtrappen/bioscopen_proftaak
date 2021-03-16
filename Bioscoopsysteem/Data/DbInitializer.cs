@@ -40,17 +40,17 @@ namespace Bioscoopsysteem.Data
 
             var shows = new Show[]
             {
-                new Show { Start_date=DateTime.Parse("2021-03-10 14:30"),HallId=1,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2021-03-10 14:30"),HallId=2,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2021-03-10 15:30"),HallId=3,MovieId=2},
-                new Show { Start_date=DateTime.Parse("2021-03-10 15:30"),HallId=4,MovieId=4},
-                new Show { Start_date=DateTime.Parse("2021-03-10 15:00"),HallId=5,MovieId=3},
+                new Show { Start_date=DateTime.Parse("2021-03-16 14:30"),HallId=1,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-16 14:30"),HallId=2,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-16 15:30"),HallId=3,MovieId=2},
+                new Show { Start_date=DateTime.Parse("2021-03-16 15:30"),HallId=4,MovieId=4},
+                new Show { Start_date=DateTime.Parse("2021-03-17 15:00"),HallId=5,MovieId=3},
 
-                new Show { Start_date=DateTime.Parse("2021-03-10 17:00"),HallId=1,MovieId=4},
-                new Show { Start_date=DateTime.Parse("2021-03-10 17:15"),HallId=2,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2021-03-10 18:00"),HallId=3,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2021-03-10 18:30"),HallId=4,MovieId=2},
-                new Show { Start_date=DateTime.Parse("2021-03-10 18:15"),HallId=5,MovieId=2},
+                new Show { Start_date=DateTime.Parse("2021-03-19 17:00"),HallId=1,MovieId=4},
+                new Show { Start_date=DateTime.Parse("2021-03-18 17:15"),HallId=2,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-17 18:00"),HallId=3,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-14 18:30"),HallId=4,MovieId=2},
+                new Show { Start_date=DateTime.Parse("2021-03-15 18:15"),HallId=5,MovieId=2},
             };
             foreach (Show s in shows)
             {

@@ -11,22 +11,40 @@
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Start_date)
+                Datum
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Start_date)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.HallId)
+                Zaal
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.HallId)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.MovieId)
+                Film
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.MovieId)
+                @Html.DisplayFor(model => model.Movie.Title)
+            </dd>
+            <dt class="col-sm-2">
+                Soort
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Movie.Genre)
+            </dd>
+            <dt class="col-sm-2">
+                Beschrijving
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Movie.Description)
+            </dd>
+            <dt class="col-sm-2">
+                Duur
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Movie.Duration)
             </dd>
         </dl>
     </div>
