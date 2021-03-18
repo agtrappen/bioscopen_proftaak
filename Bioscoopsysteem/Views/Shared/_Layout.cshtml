@@ -24,6 +24,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"> @localizer["Home"]</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Arrangements" asp-action="Index"> @localizer["Arrangementen"]</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Halls" asp-action="Index"> @localizer["Zalen"]</a>
                         </li>
                         <li class="nav-item">
@@ -37,7 +40,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Tickets" asp-action="Index"> @localizer["Kaartjes"]</a>
-                        </li>
+                        </li>                   
                         <li class="nav-item">
                             @await Html.PartialAsync("_CulturePartial")
                         </li>
