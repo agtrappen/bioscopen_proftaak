@@ -58,6 +58,21 @@ namespace Bioscoopsysteem.Data
             }
             context.SaveChanges();
 
+            var arrangements = new Arrangement[]
+            {
+                new Arrangement { Description="Movie + Popcorn + Soda", Price=10},
+                new Arrangement { Description="Movie + Chips+ Soda", Price=10},
+                new Arrangement { Description="Movie + VIP+ Soda", Price=12},
+                new Arrangement { Description="Movie + VIP + Chips + Soda", Price=15},
+                new Arrangement { Description="Movie + Soda", Price=5},
+            };
+
+            foreach (Arrangement a in arrangements)
+            {
+                context.Arrangements.Add(a);
+            }
+            context.SaveChanges();
+
         }
     }
 }

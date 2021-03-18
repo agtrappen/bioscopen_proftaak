@@ -19,6 +19,25 @@ namespace Bioscoopsysteem.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Bioscoopsysteem.Models.Arrangement", b =>
+                {
+                    b.Property<int>("ArrangementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(8,2)");
+
+                    b.HasKey("ArrangementId");
+
+                    b.ToTable("Arrangements");
+                });
+
             modelBuilder.Entity("Bioscoopsysteem.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerId")
@@ -129,6 +148,10 @@ namespace Bioscoopsysteem.Migrations
 
                     b.HasKey("ShowId");
 
+                    b.HasIndex("HallId");
+
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Shows");
                 });
 
@@ -158,6 +181,23 @@ namespace Bioscoopsysteem.Migrations
                     b.ToTable("Tickets");
                 });
 
+            modelBuilder.Entity("Bioscoopsysteem.Models.Show", b =>
+                {
+                    b.HasOne("Bioscoopsysteem.Models.Hall", null)
+                        .WithMany("Shows")
+                        .HasForeignKey("HallId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bioscoopsysteem.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+                });
+
             modelBuilder.Entity("Bioscoopsysteem.Models.Ticket", b =>
                 {
                     b.HasOne("Bioscoopsysteem.Models.Customer", null)
@@ -170,6 +210,11 @@ namespace Bioscoopsysteem.Migrations
             modelBuilder.Entity("Bioscoopsysteem.Models.Customer", b =>
                 {
                     b.Navigation("Ticket");
+                });
+
+            modelBuilder.Entity("Bioscoopsysteem.Models.Hall", b =>
+                {
+                    b.Navigation("Shows");
                 });
 #pragma warning restore 612, 618
         }

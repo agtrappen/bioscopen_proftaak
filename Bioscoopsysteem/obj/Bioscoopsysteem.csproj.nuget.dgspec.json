@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
+    "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {
+    "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "projectUniqueName": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
         "projectName": "Bioscoopsysteem",
-        "projectPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
-        "packagesPath": "C:\\Users\\ayham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+        "projectPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+        "packagesPath": "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ayham\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Qui van Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -46,7 +45,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -56,7 +55,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -81,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
