@@ -62,7 +62,7 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MovieId,Genre,Description,Duration,HallId")] Movie movie)
+        public async Task<IActionResult> Create([Bind("MovieId,Title,Genre,subtitle,Description,Actor,Writting, releaseDate,Duration,HallId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace Bioscoopsysteem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Genre,Description,Duration,HallId")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,Genre,subtitle,Description,Actor,Writting, releaseDate,Duration,HallId")] Movie movie)
         {
             if (id != movie.MovieId)
             {
