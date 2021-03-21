@@ -7435,24 +7435,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\": {},
+    "C:\\Users\\Mustafa\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "projectUniqueName": "C:\\Users\\Mustafa\\Documents\\Website\\Mijnwebsite\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
       "projectName": "Bioscoopsysteem",
-      "projectPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
-      "packagesPath": "C:\\Users\\Qui van Nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qui van Nguyen\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+      "projectPath": "C:\\Users\\Mustafa\\Documents\\Website\\Mijnwebsite\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "packagesPath": "C:\\Users\\Mustafa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mustafa\\Documents\\Website\\Mijnwebsite\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Qui van Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mustafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7514,7 +7517,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

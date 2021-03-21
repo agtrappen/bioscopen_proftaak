@@ -15,7 +15,15 @@ namespace Bioscoopsysteem.Models
         [Required]
         public string Genre { get; set; }
         [Required]
+        public string subtitle { get; set; }
+        [Required]
         public string Description { get; set; }
+        [Required]
+        public string Actor { get; set; }
+        [Required]
+        public string Writting { get; set; }
+        [Required]
+        public DateTime releaseDate { get; set; }
         [Required]
         public int Duration { get; set; }
         [Required]
