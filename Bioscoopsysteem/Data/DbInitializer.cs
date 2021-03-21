@@ -22,9 +22,9 @@ namespace Bioscoopsysteem.Data
             var movies = new Movie[]
             {
              new Movie { Title="The Shawshanks", Genre="Drama" ,subtitle="Engels", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Jack",Writting="Daniel", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
-             new Movie { Title="Redemption (1994)", Genre="Drama" ,subtitle="Nederlands", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Thomas",Writting="Pieter", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
-             new Movie { Title=" Shawshank  ", Genre="Drama" ,subtitle="Nederlands", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Thomas",Writting="Pieter", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
-             new Movie { Title="The Shawshank  (1994)", Genre="Drama" ,subtitle="Nederlands", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Thomas",Writting="Pieter", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
+             new Movie { Title="Redemption (1994)", Genre="Crime" ,subtitle="Nederlands", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Thomas",Writting="Pieter", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
+             new Movie { Title="Shawshank", Genre="Action" ,subtitle="Nederlands", Description="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",Actor="Thomas",Writting="Pieter", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
+             new Movie { Title="Cocomelon", Genre="Kinderfilm" ,subtitle="Nederlands", Description="Cocomelon's videos include children, adults, and animals who interact with each other in daily life. The lyrics appear at the bottom of the screen in the same way on all displays. In 2020",Actor="Brittany Taylor",Writting="Jay Jeon", releaseDate=DateTime.Parse("2021-03-19 17:00"), Duration=142},
               
             };
 
