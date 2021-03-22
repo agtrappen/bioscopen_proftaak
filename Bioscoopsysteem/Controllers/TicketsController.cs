@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using QRCoder;
+using System.Drawing;
+using System.IO;
 
 namespace Bioscoopsysteem.Controllers
 {
@@ -25,8 +28,10 @@ namespace Bioscoopsysteem.Controllers
         }
 
         // GET: Tickets/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int? showId)
         {
+            var tariffs = await _context.Tariffs.ToListAsync();
+            ViewBag.tariffs = tariffs;
             return View();
         }
         // POST: Ticket/Create
@@ -43,6 +48,39 @@ namespace Bioscoopsysteem.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(ticket);
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ticket = await _context.Tickets
+                .FirstOrDefaultAsync(m => m.TicketId == id);
+            if (ticket == null)
+            {
+                return NotFound();
+            }
+
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            string qrText = ticket.TicketId + "@" + ticket.ShowId;
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(30);
+            ViewBag.QRCode = BitmapToBytes(qrCodeImage);
+
+            return View(ticket);
+        }
+
+        private static Byte[] BitmapToBytes(Bitmap img)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                return stream.ToArray();
+            }
         }
     }
 }

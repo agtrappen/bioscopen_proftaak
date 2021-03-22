@@ -14,8 +14,10 @@ namespace Bioscoopsysteem.Models
         public DateTime Start_date { get; set; }
         [Required]
         public int HallId { get; set; }
+        public Hall Hall { get; set; }
         [Required]
         public int MovieId { get; set; }
+        public Movie Movie { get; set; }
         [Required]
         public double Ticket_price { get; set; }
     }

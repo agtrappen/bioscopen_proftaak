@@ -129,7 +129,30 @@ namespace Bioscoopsysteem.Migrations
 
                     b.HasKey("ShowId");
 
+                    b.HasIndex("HallId");
+
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Shows");
+                });
+
+            modelBuilder.Entity("Bioscoopsysteem.Models.Tariff", b =>
+                {
+                    b.Property<int>("TariffId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.HasKey("TariffId");
+
+                    b.ToTable("Tariffs");
                 });
 
             modelBuilder.Entity("Bioscoopsysteem.Models.Ticket", b =>
@@ -151,20 +174,74 @@ namespace Bioscoopsysteem.Migrations
                     b.Property<int>("ShowId")
                         .HasColumnType("int");
 
+                    b.Property<int>("TariffId")
+                        .HasColumnType("int");
+
                     b.HasKey("TicketId");
 
                     b.HasIndex("CustomerId");
 
+                    b.HasIndex("SeatId");
+
+                    b.HasIndex("ShowId");
+
+                    b.HasIndex("TariffId");
+
                     b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("Bioscoopsysteem.Models.Show", b =>
+                {
+                    b.HasOne("Bioscoopsysteem.Models.Hall", "Hall")
+                        .WithMany()
+                        .HasForeignKey("HallId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bioscoopsysteem.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hall");
+
+                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("Bioscoopsysteem.Models.Ticket", b =>
                 {
-                    b.HasOne("Bioscoopsysteem.Models.Customer", null)
+                    b.HasOne("Bioscoopsysteem.Models.Customer", "Customer")
                         .WithMany("Ticket")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Bioscoopsysteem.Models.Seat", "Seat")
+                        .WithMany()
+                        .HasForeignKey("SeatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bioscoopsysteem.Models.Show", "Show")
+                        .WithMany()
+                        .HasForeignKey("ShowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bioscoopsysteem.Models.Tariff", "Tariff")
+                        .WithMany()
+                        .HasForeignKey("TariffId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Seat");
+
+                    b.Navigation("Show");
+
+                    b.Navigation("Tariff");
                 });
 
             modelBuilder.Entity("Bioscoopsysteem.Models.Customer", b =>

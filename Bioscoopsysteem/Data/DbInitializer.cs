@@ -37,15 +37,15 @@ namespace Bioscoopsysteem.Data
 
 
             TimeSpan timeSpan = new TimeSpan(2, 14, 18);
-Console.WriteLine(timeSpan.ToString());
+            Console.WriteLine(timeSpan.ToString());
 
             var shows = new Show[]
             {
-                new Show { Start_date=DateTime.Parse("2007-09-01"),HallId=1,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2007-09-01"),HallId=2,MovieId=1},
-                new Show { Start_date=DateTime.Parse("2007-09-01"),HallId=3,MovieId=2},
-                new Show { Start_date=DateTime.Parse("2007-09-01"),HallId=4,MovieId=4},
-                new Show { Start_date=DateTime.Parse("2007-09-01"),HallId=5,MovieId=3},
+                new Show { Start_date=DateTime.Parse("2021-03-16 16:00"),HallId=1,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-16 17:00"),HallId=2,MovieId=1},
+                new Show { Start_date=DateTime.Parse("2021-03-16 18:00"),HallId=3,MovieId=2},
+                new Show { Start_date=DateTime.Parse("2021-03-16 19:00"),HallId=4,MovieId=4},
+                new Show { Start_date=DateTime.Parse("2021-03-16 20:00"),HallId=5,MovieId=3},
             };
             foreach (Show s in shows)
             {
@@ -53,7 +53,37 @@ Console.WriteLine(timeSpan.ToString());
             }
             context.SaveChanges();
 
+            var tariffs = new Tariff[]
+            {
+                new Tariff {Name="Standaard ticket", Price=9.00M},
+                new Tariff {Name="65+ ticket", Price=7.50M},
+                new Tariff {Name="Jongerenticket (CJP)", Price=8.00M}
+            };
+            foreach(Tariff t in tariffs)
+            {
+                context.Tariffs.Add(t);
+            }
+            context.SaveChanges();
 
+            var customers = new Customer[]
+            {
+                new Customer {Name="Henk Jansen", Email="henk@jansen.nl"}
+            };
+            foreach(Customer c in customers)
+            {
+                context.Customers.Add(c);
+            }
+            context.SaveChanges();
+
+            var tickets = new Ticket[]
+            {
+                new Ticket {ShowId=1, SeatId=1, CustomerId=1, Date_sold=DateTime.Parse("2021-03-16 16:00"), TariffId=1}
+            };
+            foreach(Ticket t in tickets)
+            {
+                context.Tickets.Add(t);
+            }
+            context.SaveChanges();
         }
     }
 }

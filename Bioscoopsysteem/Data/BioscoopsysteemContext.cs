@@ -24,5 +24,7 @@ namespace Bioscoopsysteem.Data
         public DbSet<Bioscoopsysteem.Models.Seat> Seats { get; set; }
 
         public DbSet<Bioscoopsysteem.Models.Customer> Customers { get; set; }
+
+        public DbSet<Bioscoopsysteem.Models.Tariff> Tariffs { get; set; }
     }
 }

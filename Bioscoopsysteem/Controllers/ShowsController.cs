@@ -22,7 +22,8 @@ namespace Bioscoopsysteem.Controllers
         // GET: Shows
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Shows.ToListAsync());
+            var shows = _context.Shows.Include(s => s.Movie);
+            return View(await shows.ToListAsync());
         }
 
         // GET: Shows/Details/5

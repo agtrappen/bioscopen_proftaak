@@ -910,6 +910,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "QRCoder/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/QRCoder.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1339,7 +1351,7 @@
           "Microsoft.Win32.SystemEvents": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Drawing.Common.dll": {}
@@ -3789,6 +3801,21 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "QRCoder/1.4.1": {
+      "sha512": "W8KwCwsOJe9SI7Cm7XeIMawd08F/US6xNw34lg2Qnx6m7GYYakxbyBQaNoW1Q75oJOmX/32sJUZr6Cix2B6GUQ==",
+      "type": "package",
+      "path": "qrcoder/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/QRCoder.dll",
+        "lib/net40/QRCoder.dll",
+        "lib/netstandard1.1/QRCoder.dll",
+        "lib/netstandard2.0/QRCoder.dll",
+        "qrcoder.1.4.1.nupkg.sha512",
+        "qrcoder.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -7431,27 +7458,28 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.3",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "QRCoder >= 1.4.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ayham\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Joep\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "projectUniqueName": "C:\\Users\\Joep\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
       "projectName": "Bioscoopsysteem",
-      "projectPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
-      "packagesPath": "C:\\Users\\ayham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ayham\\OneDrive - Avans Hogeschool\\Blok 3\\.net\\Proftaak+\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
+      "projectPath": "C:\\Users\\Joep\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\Bioscoopsysteem.csproj",
+      "packagesPath": "C:\\Users\\Joep\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Joep\\source\\repos\\bioscopen_proftaak\\Bioscoopsysteem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ayham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joep\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -7495,6 +7523,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.2, )"
+          },
+          "QRCoder": {
+            "target": "Package",
+            "version": "[1.4.1, )"
           }
         },
         "imports": [
@@ -7515,7 +7547,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
