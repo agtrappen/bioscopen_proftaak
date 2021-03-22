@@ -20,7 +20,13 @@ namespace Bioscoopsysteem.Migrations
                     table.PrimaryKey("PK_Arrangements", x => x.ArrangementId);
                 });
 
-            
+            migrationBuilder.AddForeignKey(
+                name: "FK_Tickets_Arrangements_ArrangementId",
+                table: "Tickets",
+                column: "ArrangementId",
+                principalTable: "Arrangements",
+                principalColumn: "ArrangementId",
+                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

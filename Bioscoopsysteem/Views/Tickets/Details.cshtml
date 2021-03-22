@@ -1,0 +1,50 @@
+﻿@model Bioscoopsysteem.Models.Ticket
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container">
+    <h1>Details</h1>
+
+    <div>
+        <h4>Show</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Show.Movie.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Show.Movie.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Show.Start_date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Show.Start_date)
+            </dd>
+            <dt class="col-sm-2">
+                Soort kaartje:
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tariff.Name)
+            </dd>
+            <dt class="col-sm-2">
+                Gekozen arrangement:
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Arrangement.Description)
+            </dd>
+            <dt class="col-sm-2">
+                QR code
+            </dt>
+            <dd class="col-sm-10">
+                <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(ViewBag.QRCode))" height="128px" width="128px" />
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.ShowId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

@@ -73,6 +73,30 @@ namespace Bioscoopsysteem.Data
             }
             context.SaveChanges();
 
+            var customers = new Customer[]
+            {
+                new Customer {Name="Kassaverkoop", Email="kassaverkoop@bioscoop.nl"}
+            };
+
+            foreach (Customer c in customers)
+            {
+                context.Customers.Add(c);
+            }
+            context.SaveChanges();
+
+            var tariffs = new Tariff[]
+            {
+                new Tariff {Name="Standaard ticket", Price=9.00M},
+                new Tariff {Name="65+ ticket", Price=7.50M},
+                new Tariff {Name="Jongerenticket (CJP)", Price=8.00M}
+            };
+            foreach (Tariff t in tariffs)
+            {
+                context.Tariffs.Add(t);
+            }
+            context.SaveChanges();
+
+
         }
     }
 }
