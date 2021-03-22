@@ -23,6 +23,11 @@ namespace Bioscoopsysteem.Controllers
             return View(await _context.Customers.ToListAsync());
         }
 
+        public IActionResult ThankYou()
+        {
+            return View("ThankYou");
+        }
+
         // GET: Customers/Details/5
         public ActionResult Details(int id)
         {

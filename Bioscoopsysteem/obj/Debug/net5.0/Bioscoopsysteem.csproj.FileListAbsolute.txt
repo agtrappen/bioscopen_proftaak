@@ -1394,3 +1394,4 @@ C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Arrangements\Index.cshtml.g.cs
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Shared\IndexCurrentMovieWeek.cshtml.g.cs
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Shared\_CulturePartial.cshtml.g.cs
+C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Customers\ThankYou.cshtml.g.cs
