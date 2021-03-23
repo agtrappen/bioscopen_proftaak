@@ -26,6 +26,4 @@ function DisplayGoogleMap() {
 
     marker.setMap(map);
 }
-
 DisplayGoogleMap();
-

@@ -1,0 +1,16 @@
+﻿@model Bioscoopsysteem.Models.Page
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Slug);
+}
+<div class="container">
+
+    <div class="py-5">
+        @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.Content))
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.PageId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

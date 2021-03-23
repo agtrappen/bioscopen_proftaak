@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Bioscoopsysteem.Models.Page>
+
+@{
+    ViewData["Title"] = "Paginas";
+}
+@section Scripts
+{
+    <script>tinymce.init({ selector: 'textarea' });</script>
+}
+<div class="container">
+    <h1>Pagina's:</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Pagina ID
+                </th>
+                <th>
+                    Slug
+                </th>
+                <th>
+                    Title
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PageId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Slug)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PageId">Aanpassen</a> |
+                        <a asp-action="Details" asp-route-id="@item.PageId">Informatie</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PageId">Verwijderen</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

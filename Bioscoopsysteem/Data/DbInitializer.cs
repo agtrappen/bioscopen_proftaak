@@ -73,6 +73,27 @@ namespace Bioscoopsysteem.Data
             }
             context.SaveChanges();
 
+
+
+            // Look for any students.
+            if (context.Pages.Any())
+            {
+                return;   // DB has been seeded
+            }
+
+            var pages = new Page[]
+            {
+             new Page { Slug="coronaregels", Title="Covid-19-Huisregels" ,Content="<h1>Covid-19-Huisregels</h1><p>In overeenstemming met de nieuwe maatregelen die zijn gepresenteerd door de demissionair premier Rutte&nbsp; zijn alle Vue Bioscopen t / m minimaal & nbsp; 15 maart 2021 helaas gesloten.</ p >< p >< br /> Wij hopen de bioscoopdeuren vanaf<strong>16 maart </ strong > &nbsp; weer te mogen openen en zien je dan graag weer terug! </ p >< p > Hou vol & amp; Stay Safe!</ p >"},
+            };
+
+
+            foreach (Page m in pages)
+            {
+                context.Pages.Add(m);
+            }
+            context.SaveChanges();
+
+
         }
     }
 }

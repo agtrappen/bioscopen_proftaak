@@ -26,5 +26,7 @@ namespace Bioscoopsysteem.Data
         public DbSet<Bioscoopsysteem.Models.Customer> Customers { get; set; }
 
         public DbSet<Bioscoopsysteem.Models.Arrangement> Arrangements { get; set; }
+
+        public DbSet<Bioscoopsysteem.Models.Page> Pages { get; set; }
     }
 }
