@@ -73,7 +73,6 @@ namespace Bioscoopsysteem.Data
             }
             context.SaveChanges();
 
-<<<<<<< HEAD
 
 
             // Look for any students.
@@ -91,7 +90,6 @@ namespace Bioscoopsysteem.Data
             foreach (Page m in pages)
             {
                 context.Pages.Add(m);
-=======
             var customers = new Customer[]
             {
                 new Customer {Name="Kassaverkoop", Email="kassaverkoop@bioscoop.nl"}
@@ -112,11 +110,11 @@ namespace Bioscoopsysteem.Data
             foreach (Tariff t in tariffs)
             {
                 context.Tariffs.Add(t);
->>>>>>> main
             }
             context.SaveChanges();
 
 
+        }
         }
     }
 }

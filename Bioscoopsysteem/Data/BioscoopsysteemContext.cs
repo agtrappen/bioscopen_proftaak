@@ -27,10 +27,8 @@ namespace Bioscoopsysteem.Data
 
         public DbSet<Bioscoopsysteem.Models.Arrangement> Arrangements { get; set; }
 
-<<<<<<< HEAD
         public DbSet<Bioscoopsysteem.Models.Page> Pages { get; set; }
-=======
+        
         public DbSet<Bioscoopsysteem.Models.Tariff> Tariffs { get; set; }
->>>>>>> main
     }
 }
