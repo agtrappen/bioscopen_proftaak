@@ -1414,4 +1414,5 @@ C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Pages\Edit.cshtml.g.cs
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Pages\Index.cshtml.g.cs
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\Tickets\Details.cshtml.g.cs
+C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\agtra\Source\Repos\bioscopen_proftaak\Bioscoopsysteem\obj\Debug\net5.0\Bioscoopsysteem.csprojAssemblyReference.cache

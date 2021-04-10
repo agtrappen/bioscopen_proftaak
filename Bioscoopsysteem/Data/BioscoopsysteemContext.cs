@@ -30,5 +30,7 @@ namespace Bioscoopsysteem.Data
         public DbSet<Bioscoopsysteem.Models.Page> Pages { get; set; }
         
         public DbSet<Bioscoopsysteem.Models.Tariff> Tariffs { get; set; }
+
+        public DbSet<Bioscoopsysteem.Models.User> Users { get; set; }
     }
 }

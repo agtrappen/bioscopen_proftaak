@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bioscoopsysteem.Data;
 using Bioscoopsysteem.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Bioscoopsysteem.Controllers
 {

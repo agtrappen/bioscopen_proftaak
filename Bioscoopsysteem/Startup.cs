@@ -35,6 +35,8 @@ namespace Bioscoopsysteem
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
             services.AddControllersWithViews();
 
+            services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
+
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var cultures = new List<CultureInfo> {
@@ -52,6 +54,8 @@ namespace Bioscoopsysteem
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSession();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -69,12 +73,14 @@ namespace Bioscoopsysteem
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
